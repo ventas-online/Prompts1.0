@@ -1,0 +1,1 @@
+export function calculatePrice(cost,margin){const c=Number(cost),m=Number(margin);if(!Number.isFinite(c)||c<0||!Number.isFinite(m)||m<0||m>=100)throw new Error("Introduce un costo válido y un margen entre 0 y 99.99%.");const price=c/(1-m/100);return {price,profit:price-c};}
