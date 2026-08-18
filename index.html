@@ -9,9 +9,9 @@
   <meta property="og:title" content="EmprendeTools">
   <meta property="og:description" content="Herramientas digitales para emprendedores.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/og-cover.png">
+  <meta property="og:image" content="assets/og-cover.svg">
   <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="assets/og-cover.png">
+  <link rel="icon" href="assets/og-cover.svg">
   <link rel="stylesheet" href="css/styles.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -21,13 +21,9 @@
 <body class="bg-slate-50 text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
   <div id="app" class="min-h-screen">
     <header id="mobile-header" class="sticky top-0 z-40 flex h-16 items-center justify-between border-b border-slate-200/80 bg-white/90 px-4 backdrop-blur-md dark:border-slate-800 dark:bg-slate-950/90 lg:hidden">
-      <button id="mobile-menu-button" type="button" class="icon-button" aria-label="Abrir menú" aria-expanded="false">
-        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
-      </button>
+      <button id="mobile-menu-button" type="button" class="icon-button" aria-label="Abrir menú" aria-expanded="false"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
       <a href="#/" data-route-link class="flex items-center gap-2 font-bold tracking-tight"><span class="brand-mark">E</span><span>EmprendeTools</span></a>
-      <button id="mobile-theme-button" type="button" class="icon-button" aria-label="Cambiar tema">
-        <svg id="mobile-theme-icon" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg>
-      </button>
+      <button id="mobile-theme-button" type="button" class="icon-button" aria-label="Cambiar tema"><svg id="mobile-theme-icon" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg></button>
     </header>
     <div class="flex min-h-screen">
       <aside id="sidebar" class="fixed inset-y-0 left-0 z-50 flex w-72 -translate-x-full flex-col border-r border-slate-200 bg-white transition-transform duration-300 dark:border-slate-800 dark:bg-slate-950 lg:sticky lg:top-0 lg:h-screen lg:translate-x-0">
@@ -46,17 +42,10 @@
           <a href="#/invoice" data-route-link data-route="/invoice" class="nav-link"><span>Cotizaciones y facturas</span></a>
           <a href="#/copygen" data-route-link data-route="/copygen" class="nav-link"><span>Generador de copys</span></a>
         </nav>
-        <div class="border-t border-slate-200 p-4 dark:border-slate-800">
-          <button id="desktop-theme-button" type="button" class="theme-toggle-button"><span id="theme-label">Modo oscuro</span><span id="theme-switch" class="theme-switch"><span class="theme-switch-dot"></span></span></button>
-        </div>
+        <div class="border-t border-slate-200 p-4 dark:border-slate-800"><button id="desktop-theme-button" type="button" class="theme-toggle-button"><span id="theme-label">Modo oscuro</span><span id="theme-switch" class="theme-switch"><span class="theme-switch-dot"></span></span></button></div>
       </aside>
       <div id="sidebar-overlay" class="fixed inset-0 z-40 hidden bg-slate-950/50 backdrop-blur-sm lg:hidden"></div>
-      <main class="min-w-0 flex-1">
-        <div class="mx-auto min-h-screen max-w-[1600px] px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
-          <div class="mb-8 hidden items-center justify-between lg:flex"><div><p id="page-eyebrow" class="mb-1 text-sm font-medium text-slate-500 dark:text-slate-400">Panel de herramientas</p><h1 id="page-title" class="text-2xl font-bold tracking-tight">Inicio</h1></div><span class="status-pill"><span class="status-dot"></span>Funciona sin servidor</span></div>
-          <section id="page-content" aria-live="polite"></section>
-        </div>
-      </main>
+      <main class="min-w-0 flex-1"><div class="mx-auto min-h-screen max-w-[1600px] px-4 py-6 sm:px-6 lg:px-8 lg:py-8"><div class="mb-8 hidden items-center justify-between lg:flex"><div><p id="page-eyebrow" class="mb-1 text-sm font-medium text-slate-500 dark:text-slate-400">Panel de herramientas</p><h1 id="page-title" class="text-2xl font-bold tracking-tight">Inicio</h1></div><span class="status-pill"><span class="status-dot"></span>Funciona sin servidor</span></div><section id="page-content" aria-live="polite"></section></div></main>
     </div>
   </div>
   <div id="toast-container" class="pointer-events-none fixed bottom-5 right-5 z-[100] flex max-w-sm flex-col gap-3" aria-live="polite" aria-atomic="true"></div>
