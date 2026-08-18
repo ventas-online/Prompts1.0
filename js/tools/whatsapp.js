@@ -1,0 +1,1 @@
+export function buildWhatsAppLink(phone,message){const clean=String(phone||"").replace(/\D/g,"");if(clean.length<7)throw new Error("Introduce un número de WhatsApp válido con código de país.");return `https://wa.me/${clean}?text=${encodeURIComponent(String(message||"Hola"))}`;}
