@@ -1,0 +1,1 @@
+export function generateQR(target,container,size=220){if(!target)throw new Error("Introduce un enlace o texto.");if(typeof QRCode==="undefined")throw new Error("No se pudo cargar el generador QR.");container.replaceChildren();new QRCode(container,{text:target,width:size,height:size,colorDark:"#0f172a",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.H});}
