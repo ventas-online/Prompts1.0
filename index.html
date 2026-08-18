@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EmprendeTools</title>
+  <meta name="description" content="Herramientas digitales rápidas y gratuitas para emprendedores.">
+  <meta name="theme-color" content="#0f172a">
+  <meta property="og:title" content="EmprendeTools">
+  <meta property="og:description" content="Herramientas digitales para emprendedores.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og-cover.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/og-cover.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: "class", theme: { extend: { fontFamily: { sans: ["Inter","ui-sans-serif","system-ui","-apple-system","BlinkMacSystemFont","Segoe UI","sans-serif"] } } } };
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
+  <div id="app" class="min-h-screen">
+    <header id="mobile-header" class="sticky top-0 z-40 flex h-16 items-center justify-between border-b border-slate-200/80 bg-white/90 px-4 backdrop-blur-md dark:border-slate-800 dark:bg-slate-950/90 lg:hidden">
+      <button id="mobile-menu-button" type="button" class="icon-button" aria-label="Abrir menú" aria-expanded="false">
+        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+      <a href="#/" data-route-link class="flex items-center gap-2 font-bold tracking-tight"><span class="brand-mark">E</span><span>EmprendeTools</span></a>
+      <button id="mobile-theme-button" type="button" class="icon-button" aria-label="Cambiar tema">
+        <svg id="mobile-theme-icon" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg>
+      </button>
+    </header>
+    <div class="flex min-h-screen">
+      <aside id="sidebar" class="fixed inset-y-0 left-0 z-50 flex w-72 -translate-x-full flex-col border-r border-slate-200 bg-white transition-transform duration-300 dark:border-slate-800 dark:bg-slate-950 lg:sticky lg:top-0 lg:h-screen lg:translate-x-0">
+        <div class="flex h-20 items-center border-b border-slate-200 px-6 dark:border-slate-800">
+          <a href="#/" data-route-link class="flex items-center gap-3"><span class="brand-mark brand-mark-lg">E</span><div><div class="font-bold tracking-tight">EmprendeTools</div><div class="text-xs text-slate-500 dark:text-slate-400">Herramientas para crecer</div></div></a>
+          <button id="close-sidebar-button" type="button" class="icon-button ml-auto lg:hidden" aria-label="Cerrar menú"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"></path></svg></button>
+        </div>
+        <nav class="flex-1 overflow-y-auto px-4 py-6">
+          <p class="nav-section-title">Principal</p>
+          <a href="#/" data-route-link data-route="/" class="nav-link"><span>Inicio</span></a>
+          <p class="nav-section-title mt-7">Herramientas</p>
+          <a href="#/calculator" data-route-link data-route="/calculator" class="nav-link"><span>Calculadora de precios</span></a>
+          <a href="#/breakeven" data-route-link data-route="/breakeven" class="nav-link"><span>Punto de equilibrio</span></a>
+          <a href="#/whatsapp" data-route-link data-route="/whatsapp" class="nav-link"><span>Enlaces de WhatsApp</span></a>
+          <a href="#/qrgenerator" data-route-link data-route="/qrgenerator" class="nav-link"><span>Generador QR</span></a>
+          <a href="#/invoice" data-route-link data-route="/invoice" class="nav-link"><span>Cotizaciones y facturas</span></a>
+          <a href="#/copygen" data-route-link data-route="/copygen" class="nav-link"><span>Generador de copys</span></a>
+        </nav>
+        <div class="border-t border-slate-200 p-4 dark:border-slate-800">
+          <button id="desktop-theme-button" type="button" class="theme-toggle-button"><span id="theme-label">Modo oscuro</span><span id="theme-switch" class="theme-switch"><span class="theme-switch-dot"></span></span></button>
+        </div>
+      </aside>
+      <div id="sidebar-overlay" class="fixed inset-0 z-40 hidden bg-slate-950/50 backdrop-blur-sm lg:hidden"></div>
+      <main class="min-w-0 flex-1">
+        <div class="mx-auto min-h-screen max-w-[1600px] px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
+          <div class="mb-8 hidden items-center justify-between lg:flex"><div><p id="page-eyebrow" class="mb-1 text-sm font-medium text-slate-500 dark:text-slate-400">Panel de herramientas</p><h1 id="page-title" class="text-2xl font-bold tracking-tight">Inicio</h1></div><span class="status-pill"><span class="status-dot"></span>Funciona sin servidor</span></div>
+          <section id="page-content" aria-live="polite"></section>
+        </div>
+      </main>
+    </div>
+  </div>
+  <div id="toast-container" class="pointer-events-none fixed bottom-5 right-5 z-[100] flex max-w-sm flex-col gap-3" aria-live="polite" aria-atomic="true"></div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
