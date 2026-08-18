@@ -1,0 +1,1 @@
+export function calculateBreakeven(fixedCosts,price,variableCost){const f=Number(fixedCosts),p=Number(price),v=Number(variableCost);if(![f,p,v].every(Number.isFinite)||f<0||p<=v)throw new Error("Revisa los valores: el precio debe ser mayor que el costo variable.");const units=f/(p-v);return {units,revenue:units*p};}
