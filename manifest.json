@@ -1,0 +1,13 @@
+{
+  "name": "EmprendeTools",
+  "short_name": "EmprendeTools",
+  "description": "Herramientas digitales rápidas y gratuitas para emprendedores.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f8fafc",
+  "theme_color": "#0f172a",
+  "lang": "es",
+  "categories": ["business", "productivity", "utilities"]
+}
